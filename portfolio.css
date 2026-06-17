@@ -1,4 +1,6 @@
-/* Core Presentation Styles */
+/* ==========================================================================
+   1. CORE PRESENTATION STYLES (FOR PC & GLOBAL)
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +15,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Stunning Cyber/Programming Background Layer with Subtle Dark Glow */
 .bg-overlay {
     position: fixed;
     top: 0;
@@ -41,7 +42,6 @@ body::before {
     pointer-events: none;
 }
 
-/* Smooth Slide Scroll Layout */
 .presentation-container {
     width: 100vw;
     height: 100vh;
@@ -51,11 +51,11 @@ body::before {
 
 .slide-page {
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 10%;
+    padding: 0 10%;
     scroll-snap-align: start;
     position: relative;
     box-sizing: border-box;
@@ -66,11 +66,11 @@ body::before {
     max-width: 1200px;
 }
 
-/* Layout Grids - FIX: Added robust column gaps and padding */
+/* Layout Grids */
 .grid-two-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px; /* Increased gap from 50px to 80px for cleaner separation */
+    gap: 80px;
     align-items: center;
 }
 
@@ -80,7 +80,7 @@ body::before {
     gap: 40px;
 }
 
-/* Premium Jet-Black Glassmorphism Cards */
+/* Premium Jet-Black Cards */
 .bg-dark-card {
     background-color: rgba(10, 10, 16, 0.85); 
     border: 1px solid rgba(147, 51, 234, 0.25); 
@@ -110,7 +110,7 @@ body::before {
     line-height: 1.6;
 }
 
-/* Image Placeholders with Dark Charcoal layout */
+/* Image Placeholders */
 .image-placeholder {
     background-color: rgba(10, 10, 16, 0.5);
     border: 2px dashed rgba(99, 102, 241, 0.3);
@@ -133,24 +133,6 @@ body::before {
     border-radius: 8px;
 }
 
-.image-placeholder i {
-    font-size: 36px;
-    margin-bottom: 12px;
-    color: #4f46e5;
-}
-
-.image-placeholder p {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    font-weight: 600;
-}
-
-.image-placeholder:hover {
-    border-color: #06b6d4;
-    background-color: rgba(6, 182, 212, 0.03);
-    color: #ffffff;
-}
-
 .main-photo {
     height: 420px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
@@ -162,7 +144,6 @@ body::before {
     object-fit: cover;
 }
 
-/* Quick Contact Info Box on First Page */
 .quick-contact-box {
     display: flex;
     flex-direction: column;
@@ -188,7 +169,7 @@ body::before {
     font-size: 16px;
 }
 
-/* Typography, Badges & Actions */
+/* Typography & Badges */
 .badge {
     font-size: 11px;
     letter-spacing: 2px;
@@ -239,10 +220,9 @@ body::before {
     -webkit-text-fill-color: transparent;
     border-left: 5px solid #06b6d4;
     padding-left: 20px;
-    margin-bottom: 25px; /* Added spacing below headings */
+    margin-bottom: 25px;
 }
 
-/* Action Buttons with Sleek Cyber Gradient */
 .btn-action {
     display: inline-block;
     padding: 14px 32px;
@@ -261,7 +241,6 @@ body::before {
     box-shadow: 0 6px 25px rgba(124, 58, 237, 0.4);
 }
 
-/* Tech Tags layout */
 .tech-stack-tags {
     margin-top: 25px;
     display: flex;
@@ -279,23 +258,6 @@ body::before {
     color: #c084fc;
 }
 
-/* Hobby Card Elements */
-.hobby-card {
-    text-align: center;
-}
-
-.hobby-icon {
-    font-size: 32px;
-    margin-bottom: 18px;
-    color: #06b6d4;
-}
-
-.mini-photo {
-    min-height: 110px !important;
-    margin-top: 20px;
-}
-
-/* Project Items Layout */
 .project-bullets li {
     font-size: 15px;
     color: #cbd5e1;
@@ -320,19 +282,12 @@ body::before {
     margin-top: 15px;
 }
 
-.project-demo-link:hover {
-    color: #a855f7;
-    border-color: #a855f7;
-}
-
-/* FIX: Added space between multiple images in the project section */
 .project-images-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px; 
 }
 
-/* Workflow Steps Layout */
 .workflow-timeline {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -361,11 +316,10 @@ body::before {
     margin-bottom: 20px;
 }
 
-/* Contact List & Social Buttons */
 .contact-list .contact-row {
     font-size: 17px;
     color: #e2e8f0;
-    margin-bottom: 12px; /* Increased line spacing for clear alignment */
+    margin-bottom: 12px;
 }
 
 .contact-row i {
@@ -391,17 +345,8 @@ body::before {
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: all 0.2s;
 }
 
-.social-box:hover {
-    background: #ffffff;
-    color: #05050a;
-    border-color: #ffffff;
-    transform: translateY(-2px);
-}
-
-/* Page Indicator */
 .page-number {
     position: absolute;
     bottom: 90px;
@@ -411,7 +356,6 @@ body::before {
     font-weight: 600;
 }
 
-/* Fixed Footer Slide Control Panels */
 .presentation-footer {
     position: fixed;
     bottom: 0;
@@ -433,7 +377,6 @@ body::before {
     text-decoration: none;
     margin: 0 12px;
     font-weight: 600;
-    transition: color 0.2s;
 }
 
 .slide-navigation a:hover {
@@ -441,9 +384,11 @@ body::before {
 }
 
 /* ==========================================================================
-   UPDATED RESPONSIVE UI ADJUSTMENT: FIXED FOR BOTH PC OVERLAPS AND PHONES
+   2. PERFECT MOBILE RESPONSIVE UI (ONLY FOR PHONES/TABLETS)
    ========================================================================== */
-height: auto !important;
+@media (max-width: 1024px) {
+    .presentation-container {
+        height: auto !important;
         width: 100% !important;
         overflow-y: visible !important;
         scroll-snap-type: none !important;
@@ -542,86 +487,5 @@ height: auto !important;
     .social-links-container {
         flex-wrap: wrap !important;
         width: 100% !important;
-    }
-}
-        scroll-snap-align: none !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-    }
-
-    .grid-two-cols, 
-    .grid-three-cols, 
-    .workflow-timeline,
-    .flex-responsive-container {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 35px !important;
-        width: 100% !important;
-    }
-
-    .dev-name {
-        font-size: 38px !important;
-        line-height: 1.2;
-        margin-top: 15px;
-    }
-
-    .dev-title {
-        font-size: 18px !important;
-        letter-spacing: 1px !important;
-    }
-
-    .section-heading, .contact-heading {
-        font-size: 28px !important;
-    }
-
-    .image-placeholder {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 200px !important;
-        padding: 10px !important; 
-    }
-
-    .main-photo, .mini-photo {
-        height: 300px !important;
-    }
-
-    .bg-dark-card {
-        padding: 20px !important;
-        width: 100% !important;
-    }
-
-    .page-number, .footer-left, .footer-right {
-        display: none !important;
-    }
-
-    .presentation-footer {
-        position: fixed !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        flex-direction: column !important;
-        gap: 8px !important;
-        padding: 12px !important;
-        background-color: rgba(3, 3, 5, 0.95) !important;
-        backdrop-filter: blur(10px);
-        height: auto !important;
-        z-index: 9999;
-    }
-
-    .slide-navigation {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 6px 12px !important;
-    }
-
-    .slide-navigation a {
-        margin: 0 !important;
-        font-size: 11px !important;
-    }
-
-    .social-links-container {
-        flex-wrap: wrap;
     }
 }
