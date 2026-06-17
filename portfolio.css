@@ -7,7 +7,6 @@
 }
 
 body {
-    /* Rich Obsidian Black - እጅግ ጥልቅ እና ማራኪ ጥቁር መሰረት */
     background-color: #05050a; 
     color: #ffffff;
     overflow-x: hidden;
@@ -21,17 +20,14 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* የኮዲንግ መስመሮች ምስል */
     background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1920&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    /* ባግራውንዱ ይበልጥ ወደ ጥቁር እንዲያደላና ጽሁፎቹ እንዲጎሉ ኦፓሲቲውን ወደ 0.08 (8%) ዝቅ አድርጌዋለሁ */
     opacity: 0.08; 
     z-index: -2;
     pointer-events: none;
 }
 
-/* ጥቁሩን ድባብ ሳይረብሽ በጣም ረቂቅና ውብ የሆነ የሐምራዊ እና ሲያን የኔዮን ነጸብራቅ ከጀርባ ይሰጣል */
 body::before {
     content: '';
     position: fixed;
@@ -55,13 +51,14 @@ body::before {
 
 .slide-page {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 10%;
+    padding: 100px 10%;
     scroll-snap-align: start;
     position: relative;
+    box-sizing: border-box;
 }
 
 .slide-content {
@@ -69,25 +66,24 @@ body::before {
     max-width: 1200px;
 }
 
-/* Layout Grids */
+/* Layout Grids - FIX: Added robust column gaps and padding */
 .grid-two-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 80px; /* Increased gap from 50px to 80px for cleaner separation */
     align-items: center;
 }
 
 .grid-three-cols {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 40px;
 }
 
 /* Premium Jet-Black Glassmorphism Cards */
 .bg-dark-card {
-    /* ይበልጥ ወደ ጥቁር ያዘነበለ ጥልቅ የካርድ ቀለም */
     background-color: rgba(10, 10, 16, 0.85); 
-    border: 1px solid rgba(147, 51, 234, 0.25); /* Soft Purple Border */
+    border: 1px solid rgba(147, 51, 234, 0.25); 
     padding: 35px;
     border-radius: 16px;
     backdrop-filter: blur(20px);
@@ -97,7 +93,7 @@ body::before {
 
 .bg-dark-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(6, 182, 212, 0.5); /* Turns Neon Cyan on hover */
+    border-color: rgba(6, 182, 212, 0.5); 
     box-shadow: 0 20px 40px rgba(6, 182, 212, 0.1);
 }
 
@@ -109,7 +105,7 @@ body::before {
 }
 
 .bg-dark-card p {
-    color: #94a3b8; /* Clean and readable contrast */
+    color: #94a3b8; 
     font-size: 14px;
     line-height: 1.6;
 }
@@ -123,11 +119,18 @@ body::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 20px;
     text-align: center;
     color: #64748b;
     transition: all 0.3s ease;
     min-height: 250px;
+}
+
+.image-placeholder img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
 }
 
 .image-placeholder i {
@@ -154,7 +157,9 @@ body::before {
 }
 
 .portrait-photo {
-    height: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
 }
 
 /* Quick Contact Info Box on First Page */
@@ -234,6 +239,7 @@ body::before {
     -webkit-text-fill-color: transparent;
     border-left: 5px solid #06b6d4;
     padding-left: 20px;
+    margin-bottom: 25px; /* Added spacing below headings */
 }
 
 /* Action Buttons with Sleek Cyber Gradient */
@@ -293,7 +299,8 @@ body::before {
 .project-bullets li {
     font-size: 15px;
     color: #cbd5e1;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    list-style: none;
 }
 
 .project-bullets i {
@@ -309,6 +316,8 @@ body::before {
     border-bottom: 2px solid rgba(6, 182, 212, 0.3);
     padding-bottom: 4px;
     transition: color 0.2s;
+    display: inline-block;
+    margin-top: 15px;
 }
 
 .project-demo-link:hover {
@@ -316,10 +325,11 @@ body::before {
     border-color: #a855f7;
 }
 
+/* FIX: Added space between multiple images in the project section */
 .project-images-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 30px; 
 }
 
 /* Workflow Steps Layout */
@@ -355,7 +365,7 @@ body::before {
 .contact-list .contact-row {
     font-size: 17px;
     color: #e2e8f0;
-    margin-bottom: 5px;
+    margin-bottom: 12px; /* Increased line spacing for clear alignment */
 }
 
 .contact-row i {
@@ -366,6 +376,7 @@ body::before {
 .social-links-container {
     display: flex;
     gap: 15px;
+    margin-top: 25px;
 }
 
 .social-box {
@@ -410,7 +421,7 @@ body::before {
     justify-content: space-between;
     align-items: center;
     padding: 22px 5%;
-    background-color: #030305; /* Jet Black Footer */
+    background-color: #030305; 
     border-top: 1px solid rgba(147, 51, 234, 0.1);
     font-size: 13px;
     color: #64748b;
@@ -429,22 +440,99 @@ body::before {
     color: #06b6d4;
 }
 
-/* Responsive UI Adjustment */
-@media (max-width: 900px) {
-    .grid-two-cols, .grid-three-cols, .workflow-timeline {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-    .slide-page {
-        height: auto;
-        padding: 100px 5%;
-        scroll-snap-align: none;
-    }
+/* ==========================================================================
+   UPDATED RESPONSIVE UI ADJUSTMENT: FIXED FOR BOTH PC OVERLAPS AND PHONES
+   ========================================================================== */
+@media (max-width: 1024px) {
     .presentation-container {
-        height: auto;
-        scroll-snap-type: none;
+        height: auto !important;
+        width: 100% !important;
+        overflow-y: visible !important;
+        scroll-snap-type: none !important;
     }
-    .page-number, .presentation-footer {
-        display: none;
+
+    .slide-page {
+        height: auto !important;
+        min-height: 100vh;
+        padding: 80px 20px 100px 20px !important; 
+        scroll-snap-align: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
+    .grid-two-cols, 
+    .grid-three-cols, 
+    .workflow-timeline,
+    .flex-responsive-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 35px !important;
+        width: 100% !important;
+    }
+
+    .dev-name {
+        font-size: 38px !important;
+        line-height: 1.2;
+        margin-top: 15px;
+    }
+
+    .dev-title {
+        font-size: 18px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .section-heading, .contact-heading {
+        font-size: 28px !important;
+    }
+
+    .image-placeholder {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 200px !important;
+        padding: 10px !important; 
+    }
+
+    .main-photo, .mini-photo {
+        height: 300px !important;
+    }
+
+    .bg-dark-card {
+        padding: 20px !important;
+        width: 100% !important;
+    }
+
+    .page-number, .footer-left, .footer-right {
+        display: none !important;
+    }
+
+    .presentation-footer {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        padding: 12px !important;
+        background-color: rgba(3, 3, 5, 0.95) !important;
+        backdrop-filter: blur(10px);
+        height: auto !important;
+        z-index: 9999;
+    }
+
+    .slide-navigation {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 6px 12px !important;
+    }
+
+    .slide-navigation a {
+        margin: 0 !important;
+        font-size: 11px !important;
+    }
+
+    .social-links-container {
+        flex-wrap: wrap;
     }
 }
