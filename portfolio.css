@@ -443,9 +443,7 @@ body::before {
 /* ==========================================================================
    UPDATED RESPONSIVE UI ADJUSTMENT: FIXED FOR BOTH PC OVERLAPS AND PHONES
    ========================================================================== */
-@media (max-width: 1024px) {
-    .presentation-container {
-        height: auto !important;
+height: auto !important;
         width: 100% !important;
         overflow-y: visible !important;
         scroll-snap-type: none !important;
@@ -453,8 +451,99 @@ body::before {
 
     .slide-page {
         height: auto !important;
-        min-height: 100vh;
-        padding: 80px 20px 100px 20px !important; 
+        min-height: 100vh !important;
+        padding: 60px 24px 120px 24px !important; 
+        scroll-snap-align: none !important;
+        display: block !important;
+        position: relative !important;
+        box-sizing: border-box !important;
+    }
+
+    .slide-content {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+        width: 100% !important;
+    }
+
+    .grid-two-cols, 
+    .grid-three-cols, 
+    .workflow-timeline,
+    .flex-responsive-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 35px !important;
+        width: 100% !important;
+    }
+
+    .image-placeholder, .main-photo, .portrait-photo, .mini-photo {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        max-height: 350px !important;
+        object-fit: cover !important;
+        margin-top: 15px !important;
+        z-index: 1 !important;
+    }
+
+    .dev-name {
+        font-size: 38px !important;
+        line-height: 1.2 !important;
+        margin-top: 15px !important;
+        display: block !important;
+    }
+
+    .dev-title {
+        font-size: 18px !important;
+        letter-spacing: 1px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .section-heading, .contact-heading {
+        font-size: 28px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .bg-dark-card {
+        padding: 20px !important;
+        width: 100% !important;
+    }
+
+    .page-number, .footer-left, .footer-right {
+        display: none !important;
+    }
+
+    .presentation-footer {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        padding: 12px !important;
+        background-color: rgba(3, 3, 5, 0.98) !important;
+        backdrop-filter: blur(15px);
+        height: auto !important;
+        z-index: 9999 !important;
+    }
+
+    .slide-navigation {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 6px 12px !important;
+    }
+
+    .slide-navigation a {
+        margin: 0 !important;
+        font-size: 11px !important;
+    }
+
+    .social-links-container {
+        flex-wrap: wrap !important;
+        width: 100% !important;
+    }
+}
         scroll-snap-align: none !important;
         display: flex !important;
         flex-direction: column !important;
